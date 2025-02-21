@@ -15,14 +15,19 @@ services:
       - cp wp-config-local.php wp-config.php
     run:
       - .lando/run.sh
+  phpmyadmin:
+    type: phpmyadmin
+    host: database
   mailhog:
     type: mailhog
     portforward: true
     hogfrom:
       - appserver
+
 proxy:
-  appserver_nginx:
-    - wp-starter.local
+  phpmyadmin:
+    - phpmyadmin.lndo.site # Lando's automatic wildcard domain
+
 events:
   pre-start:
     - appserver: .lando/pre-start.sh
