@@ -1,20 +1,18 @@
 {
-    "name": "ptd/wp-starter",
-    "description": "My WP Starter",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://wpackagist.org"
-        }
-    ],
-    "require": {
-        "wpackagist-plugin/debug-bar": "1.1.4",
-        "wpackagist-plugin/query-monitor": "dev-trunk",
-        "wpackagist-theme/generatepress": "*"
-    },
-    "config": {
-        "allow-plugins": {
-            "composer/installers": true
-        }
-    }
+	"name": "ptd/wp-starter",
+	"description": "My WP Starter",
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org"
+		}
+	],
+	"require": {
+		"wpackagist-plugin/debug-bar": "1.1.4"
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true
+		}
+	}
 }

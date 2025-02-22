@@ -1,4 +1,4 @@
 # Activate all other plugins
 wp plugin activate --all
 
-wp theme activate generatepress
+# wp theme activate generatepress

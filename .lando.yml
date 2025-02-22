@@ -1,5 +1,18 @@
 name: my-wp-starter
 recipe: wordpress
+excludes:
+  - vendor
+  - node_modules
+  - .git
+  - /wp-content/uploads
+  - /wp-content/upgrade
+  - /wp-content/backup-db
+  - /wp-content/mu-plugins
+  - /wp-content/plugins
+  - /wp-content/plugins/*/node_modules
+  - /wp-content/themes/*/node_modules
+  # - '!/wp-content/themes/your-theme'
+  # - '!/wp-content/plugins/your-plugin'
 config:
   php: 8.2
   composer_version: 2
@@ -33,3 +46,12 @@ events:
     - appserver: .lando/pre-start.sh
   post-start:
     - appserver: .lando/post-start.sh
+#
+#
+# The best way to improve performance is to exclude WP directories from bind mounting.
+# This means that you will NOT be able to make changes to these files at runtime,
+# they will be copied to the internal docker instance on startup and not synced.
+# You'll have to restart lando in order to copy changes.
+# Remember to rebuild after making changes to the lando.yml.
+
+# Additionally, if you are using composer, you'll want to add the vendor/ directory -- or node_modules for node.
