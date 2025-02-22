@@ -8,12 +8,13 @@ excludes:
   - /wp-content/upgrade
   - /wp-content/backup-db
   - /wp-content/mu-plugins
-  - /wp-content/plugins
+  # - /wp-content/plugins
   - /wp-content/plugins/Fancy-Squares/node_modules
   - /wp-content/themes/sage/node_modules
   - /wp-content/themes/full-site-editing/node_modules
-  # - '!/wp-content/themes/your-theme'
-  # - '!/wp-content/plugins/your-plugin'
+  # - "!/wp-content/plugins/Fancy-Squares"
+  # - "!/wp-content/themes/sage"
+  # - "!/wp-content/themes/full-site-editing"
 config:
   php: 8.2
   composer_version: 2
