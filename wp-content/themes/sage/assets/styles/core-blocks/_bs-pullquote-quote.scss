@@ -1,0 +1,16 @@
+.bs-pullquote-block {
+	@extend .p-4;
+	blockquote {
+		@extend .blockquote;
+	}
+	cite {
+		@extend .blockquote-footer;
+	}
+}
+.bs-quote-block {
+	@extend .p-4;
+	@extend .blockquote;
+	cite {
+		@extend .blockquote-footer;
+	}
+}

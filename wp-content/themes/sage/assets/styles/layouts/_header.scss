@@ -1,0 +1,29 @@
+.header-block {
+	&__skip-link {
+		@include font(16);
+		color: colors(white);
+		border: 1px solid colors(white);
+		letter-spacing: 0.5px;
+		position: fixed;
+		top: 10px;
+		left: 10px;
+		z-index: 91;
+		padding: 10px 15px;
+		border-radius: 40px;
+		background-color: colors(black);
+		&:hover {
+			color: colors(white);
+		}
+	}
+}
+
+// .main-menu {
+// 	&__item,
+// 	&__dropdown-item {
+// 	}
+// 	&__item {
+// 	}
+// 	&__dropdown-item-link,
+// 	&__primary-nav-link {
+// 	}
+// }

@@ -1,0 +1,87 @@
+// Utilities
+$utilities: map-merge(
+	$utilities,
+	(
+		// 'object-fit': (
+		// 	property: object-fit,
+		// 	values: cover contain fill,
+		// ),
+		'mix-blend-mode': (
+			property: 'mix-blend-mode',
+			class: 'blend',
+			values: overlay,
+		),
+		'letter-spacing': (
+			property: 'letter-spacing',
+			values: (
+				none: 0,
+			),
+		),
+		'cursor': (
+			property: 'cursor',
+			values: pointer default,
+		),
+		// $position-values: (
+		// 	0: 0,
+		// 	10: 10%,
+		// 	20: 20%,
+		// 	30: 30%,
+		// 	40: 40%,
+		// 	50: 50%,
+		// 	100: 100%
+		// ),
+		// 'position': (
+		// 	property: position,
+		// 	responsive: true,
+		// 	values: static relative absolute fixed sticky,
+		// ),
+		// 'top':
+		// (
+		// 	property: top,
+		// 	values: $position-values,
+		// 	responsive: true,
+		// ),
+		// 'bottom': (
+		// 	property: bottom,
+		// 	values: $position-values,
+		// 	responsive: true,
+		// ),
+		// 'start': (
+		// 	property: left,
+		// 	class: start,
+		// 	values: $position-values,
+		// 	responsive: true,
+		// ),
+		// 'end': (
+		// 	property: right,
+		// 	class: end,
+		// 	values: $position-values,
+		// 	responsive: true,
+		// ),
+		// 'translate-middle': (
+		// 	property: transform,
+		// 	class: translate-middle,
+		// 	values: (
+		// 		null: translate(-50%, -50%),
+		// 		x: translateX(-50%),
+		// 		y: translateY(-50%),
+		// 	),
+		// 	responsive: true,
+		// ),
+		// "width": (
+		// 	property: width,
+		// 	class: w,
+		// 	values: (
+		// 		25: 25%,
+		// 		40: 40%,
+		// 		50: 50%,
+		// 		60: 60%,
+		// 		70: 70%,
+		// 		75: 75%,
+		// 		100: 100%,
+		// 		auto: auto
+		// 	),
+		// 	responsive: true,
+		// ),
+	)
+);

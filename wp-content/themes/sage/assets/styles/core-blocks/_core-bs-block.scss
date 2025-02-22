@@ -1,0 +1,37 @@
+@import 'bs-cover-block';
+@import 'bs-pullquote-quote';
+@import 'bs-block-btn-group';
+@import 'bs-gallery-block';
+.bs-block {
+	&.has-text-align-center,
+	&.text-align-center,
+	.has-text-align-center,
+	.text-align-center {
+		text-align: center;
+	}
+
+	&.has-text-align-right,
+	&.text-align-right
+	.has-text-align-right,
+	.text-align-right {
+		text-align: right;
+	}
+
+	&.has-text-align-left,
+	&.text-align-left,
+	.has-text-align-left,
+	.text-align-left {
+		text-align: left;
+	}
+	&__card-editor {
+		padding: 0;
+		width: 100%;
+		max-width: 100%;
+	}
+	&__card-editor-btn {
+		height: auto;
+		width: auto;
+		top: 10px;
+		left: 10px;
+	}
+}

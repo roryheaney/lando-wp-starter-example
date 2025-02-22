@@ -1,0 +1,17 @@
+.carousel {
+	background: linear-gradient(#e98a00, #f5aa2f);
+	&__play-pause {
+		.carousel-indicators & {
+			text-indent: 0;
+			height: auto;
+		}
+	}
+}
+[data-whatintent='mouse'] {
+	[data-bs-swipeable] {
+		cursor: grab;
+		&:active {
+			cursor: grabbing;
+		}
+	}
+}

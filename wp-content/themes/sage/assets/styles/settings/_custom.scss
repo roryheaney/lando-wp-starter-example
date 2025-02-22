@@ -1,0 +1,13 @@
+$grid-breakpoints: (
+	xs: 0,
+	sm: 300px,
+	md: 768px,
+	lg: 1024px,
+	xl: 1200px,
+	xxl: 1400px
+);
+
+//
+// add back 15px padding / gutter to rows / container / col's
+// BS 5 had it set to 12px
+$grid-gutter-width: 1.875rem;

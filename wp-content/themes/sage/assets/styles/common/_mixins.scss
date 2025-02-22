@@ -1,0 +1,61 @@
+/// Include font styles
+///
+/// @param {Arglist} $keys - font size, font weight, font family or any of them to include in the rules
+///
+/// @example
+///  @include font(16, bold);
+///  @include font(bold);
+///  @include font(32);
+///  @include font(32, regular, primary);
+///  @include font(32, bold, secondary);
+///
+/// @return {String} font-face rules
+@mixin font($keys...) {
+	@each $key in $keys {
+		@if type-of($key) == 'number' {
+			font-size: map-get($theme-fonts, 'size', $key);
+		} @else {
+			@if (map-has-key($theme-fonts, 'name', $key)) {
+				font-family: map-get($theme-fonts, 'name', $key);
+			}
+			@if (map-has-key($theme-fonts, 'weight', $key)) {
+				font-weight: map-get($theme-fonts, 'weight', $key);
+			}
+		}
+	}
+}
+// see here first if the default BS 5 solution will work:
+// https://getbootstrap.com/docs/5.0/helpers/ratio/
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+	}
+}
+
+@mixin placeholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}
+
+@mixin link-transition {
+    transition: all .25s ease-out;
+}
+
+// see here first if the default BS 5 solution will work:
+// https://getbootstrap.com/docs/5.0/utilities/position/#center-elements
+@mixin centerer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin mainTransitions {
+    transition: all .25s ease-out;
+}

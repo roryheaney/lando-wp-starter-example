@@ -1,0 +1,88 @@
+.bs5-figure-el {
+	margin-bottom: 0;
+	&--full,
+	&--wide {
+		position: relative;
+		height: 450px;
+		width: 100vw;
+		margin-left: 50%;
+		transform: translateX(-50%);
+		display: block;
+		@include media-breakpoint-up(lg){
+			height: 600px;
+		}
+		.bs5-figure-el__img {
+			max-width: none;
+			position: absolute;
+			left: 0;
+			top: 0;
+			object-fit: cover;
+			height: 100%;
+  			width: 100%;
+		}
+	}
+	&--wide {
+		max-width: 1400px;
+	}
+	&--left {
+		text-align: left;
+	}
+	&--center {
+		text-align: center;
+	}
+	&--right {
+		text-align: right;
+	}
+	&--bleed-right {
+		left: 0;
+		right: 0;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		z-index: 0;
+		@include media-breakpoint-up(lg) {
+			--container-width: #{map_get($container-max-widths, lg) * 0.5};
+			--negative-margin: calc(
+				var(--container-width) - 50vw - #{$container-padding-x * 0.5}
+			);
+			left: 0;
+			right: var(--negative-margin);
+		}
+		@include media-breakpoint-up(xl) {
+			--container-width: #{map_get($container-max-widths, xl) * 0.5};
+		}
+		@include media-breakpoint-up(xxl) {
+			--container-width: #{map_get($container-max-widths, xxl) * 0.5};
+		}
+	}
+	&--bleed-left {
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		position: absolute;
+		z-index: 0;
+		@include media-breakpoint-up(lg) {
+			--container-width: #{map_get($container-max-widths, lg) * 0.5};
+			--negative-margin: calc(
+				var(--container-width) - 50vw - #{$container-padding-x * 0.5}
+			);
+			left: var(--negative-margin);
+			right: 0;
+			.bs5-figure-el__img {
+				object-fit: cover;
+				position: absolute;
+				height: 100%;
+				width: 100%;
+			}
+		}
+
+		@include media-breakpoint-up(xl) {
+			--container-width: #{map_get($container-max-widths, xl) * 0.5};
+		}
+		@include media-breakpoint-up(xxl) {
+			--container-width: #{map_get($container-max-widths, xxl) * 0.5};
+		}
+	}
+}
+

@@ -1,0 +1,15 @@
+.container-md-max-width {
+	@include media-breakpoint-up(md) {
+		max-width: 720px;
+	}
+}
+.container-lg-max-width {
+	@include media-breakpoint-up(lg) {
+		max-width: 960px;
+	}
+}
+.container-xl-max-width {
+	@include media-breakpoint-up(xl) {
+		max-width: 1140px;
+	}
+}

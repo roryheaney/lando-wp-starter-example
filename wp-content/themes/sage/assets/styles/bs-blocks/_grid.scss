@@ -1,0 +1,109 @@
+.wp-block-bs5-bootstrap-grid {
+	--bs-gap: 30px 0;
+	@include media-breakpoint-up(lg) {
+		--bs-gap: 30px;
+	}
+}
+
+.bs-g-col-negative-right-margin,
+.bs-g-col-negative-left-margin {
+	// @include media-breakpoint-down(md) {
+	// 	margin-left: -$container-padding-x * 0.5;
+	// 	margin-right: -$container-padding-x * 0.5;
+	// }
+	figure,
+	picture {
+		@include media-breakpoint-up(lg){
+			max-height: 550px;
+			min-height: 550px;
+			position: relative;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+	@include media-breakpoint-down(md) {
+		height: 300px;
+	}
+	@include media-breakpoint-up(lg) {
+		--container-width: #{map_get($container-max-widths, lg) * 0.5};
+		--negative-margin: calc(
+			var(--container-width) - 50vw - #{$container-padding-x * 0.5}
+		);
+	}
+	@include media-breakpoint-up(xl) {
+		--container-width: #{map_get($container-max-widths, xl) * 0.5};
+	}
+	@include media-breakpoint-up(xxl) {
+		--container-width: #{map_get($container-max-widths, xxl) * 0.5};
+	}
+	&--full-lg-down {
+		@include media-breakpoint-down(lg) {
+			position: relative;
+			height: 450px;
+			width: 100vw;
+			margin-left: calc(50% - 1px);
+			transform: translateX(-50%);
+			display: block;
+			figure,
+			picture {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+				}
+			}
+		}
+		@include media-breakpoint-down(md) {
+			height: 325px;
+		}
+	}
+	&--full-md-down {
+		@include media-breakpoint-down(md) {
+			position: relative;
+			height: 325px;
+			width: 100vw;
+			margin-left: calc(50% - 1px);
+			transform: translateX(-50%);
+			display: block;
+			figure,
+			picture {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+.bs-g-col-negative-right-margin {
+	@include media-breakpoint-up(lg) {
+		margin-right: var(--negative-margin);
+	}
+}
+.bs-g-col-negative-left-margin {
+	@include media-breakpoint-up(lg) {
+		margin-left: var(--negative-margin);
+	}
+}

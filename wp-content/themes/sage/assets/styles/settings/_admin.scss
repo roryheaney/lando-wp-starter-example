@@ -1,0 +1,220 @@
+.wp-block {
+	max-width: 1440px;
+	&.wp-block-post-title {
+		max-width: 1315px;
+	}
+	.wp-block-cover__inner-container {
+		width: 100% !important;
+	}
+}
+[data-type="bs5/bootstrap-row"] {
+	.row {
+		> .block-editor-inner-blocks {
+			width: 100%;
+		}
+	}
+}
+
+// @mixin generate-cols($breakpoint, $cols) {
+// 	@each $num in 1 2 3 4 5 6 {
+// 		@if $breakpoint == "" {
+// 			&[class*="cols-#{$num}"] {
+// 			[data-type="bs5/bootstrap-columns"] {
+// 				> .block-editor-inner-blocks > .block-editor-block-list__layout {
+// 				> *:not([data-column-class^="col-"]) {
+// 					flex: 0 0 auto;
+// 					width: calc(100% / $num);
+// 				}
+// 				}
+// 			}
+// 			}
+// 		} @else {
+// 			&[class*="cols-#{$breakpoint}-#{$num}"] {
+// 				[data-type="bs5/bootstrap-columns"] {
+// 					> .block-editor-inner-blocks > .block-editor-block-list__layout {
+// 					> *:not([data-column-class^="col-"]) {
+// 						flex: 0 0 auto;
+// 						width: calc(100% / $num);
+// 					}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+// [data-type="bs5/bootstrap-row"] {
+// 	.row {
+// 	> .block-editor-inner-blocks {
+// 		width: 100%;
+// 	}
+
+// 	[data-type="bs5/bootstrap-columns"] {
+// 		> .block-editor-inner-blocks > .block-editor-block-list__layout {
+// 		@include make-row();
+// 		> [data-column-class="col"] {
+// 			flex: 1 0 0%;
+// 		}
+// 		}
+// 	}
+
+// 	[data-type="bs5/bootstrap-column"] {
+// 		margin-left: 0;
+// 		margin-right: 0;
+// 	}
+
+// 	@include generate-cols("", 6); // Default for row-cols-*
+
+// 	@include media-breakpoint-up(sm) {
+// 		@include generate-cols("sm", 6); // For row-cols-sm-*
+// 	}
+
+// 	@include media-breakpoint-up(md) {
+// 		@include generate-cols("md", 6); // For row-cols-md-*
+// 	}
+
+// 	@include media-breakpoint-up(lg) {
+// 		@include generate-cols("lg", 6); // For row-cols-lg-*
+// 	}
+
+// 	@include media-breakpoint-up(xl) {
+// 		@include generate-cols("xl", 6); // For row-cols-xl-*
+// 	}
+
+// 	@include media-breakpoint-up(xxl) {
+// 		@include generate-cols("xxl", 6); // For row-cols-xxl-*
+// 	}
+// 	}
+// }
+
+
+@mixin generate-column-classes($breakpoint) {
+	@for $i from 1 through 12 {
+	  [data-column-class*="col-#{$breakpoint}-#{$i}"] {
+		@extend .col-#{$breakpoint}-#{$i};
+	  }
+	}
+  }
+
+  // Generate classes for each breakpoint
+  @include generate-column-classes(sm); // for col-sm-*
+  @include generate-column-classes(md); // for col-md-*
+  @include generate-column-classes(lg); // for col-lg-*
+  @include generate-column-classes(xl); // for col-xl-*
+  @include generate-column-classes(xxl); // for col-xxl-*
+
+[data-type="bs5/bootstrap-column"] {
+	> div {
+		width: 100%;
+		// padding: 0 15px;
+		> .block-editor-inner-blocks {
+			width: 100%;
+		}
+	}
+}
+
+[data-type="rmh/image"] {
+	> .components-toolbar {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+}
+
+
+// get all booststrap self classes and their breakpoint versions
+$alignments: align-self-center, align-self-start, align-self-end, align-self-baseline, align-self-stretch, align-self-sm-center, align-self-sm-start, align-self-sm-end, align-self-sm-baseline, align-self-sm-stretch, align-self-md-center, align-self-md-start, align-self-md-end, align-self-md-baseline, align-self-md-stretch, align-self-lg-center, align-self-lg-start, align-self-lg-end, align-self-lg-baseline, align-self-lg-stretch, align-self-xl-center, align-self-xl-start, align-self-xl-end, align-self-xl-baseline, align-self-xl-stretch, align-self-xxl-center, align-self-xxl-start, align-self-xxl-end, align-self-xxl-baseline, align-self-xxl-stretch;
+@each $alignment in $alignments {
+	[data-self-alignment-1="#{$alignment}"],
+	[data-self-alignment-2="#{$alignment}"],
+	[data-self-alignment-3="#{$alignment}"],
+	[data-self-alignment-4="#{$alignment}"],
+	[data-self-alignment-5="#{$alignment}"] {
+		@extend .#{$alignment};
+	}
+}
+$bsMargins: mb-0, mb-1, mb-2, mb-3, mb-4, mb-5, mb-auto, mb-sm-0, mb-sm-1, mb-sm-2, mb-sm-3, mb-sm-4, mb-sm-5, mb-sm-auto, mb-md-0, mb-md-1, mb-md-2, mb-md-3, mb-md-4, mb-md-5, mb-md-auto, mb-lg-0, mb-lg-1, mb-lg-2, mb-lg-3, mb-lg-4, mb-lg-5, mb-lg-auto, mb-xl-0, mb-xl-1, mb-xl-2, mb-xl-3, mb-xl-4, mb-xl-5, mb-xl-auto, mb-xxl-0, mb-xxl-1, mb-xxl-2, mb-xxl-3, mb-xxl-4, mb-xxl-5, mb-xxl-auto, ms-auto, ms-sm-auto, ms-md-auto, ms-lg-auto, ms-xl-auto, ms-xxl-auto, me-auto, me-sm-auto, me-md-auto, me-lg-auto, me-xl-auto, me-xxl-auto;
+@each $bsMargin in $bsMargins {
+	[data-margin~="#{$bsMargin}"] {
+		@extend .#{$bsMargin};
+	}
+}
+
+[data-type="bs-5/card"] {
+	.btn-select-image {
+		display: block;
+		padding: 0;
+  		height: auto;
+	}
+}
+
+[data-type="custom/accordion"] {
+	> .block-list-appender {
+		position: relative !important;
+	}
+}
+
+[data-type="bs5/bootstrap-grid"] {
+	> .grid {
+		> .block-editor-inner-blocks {
+			grid-column: auto/span 12;
+		}
+	}
+}
+
+[data-type="custom/section-block"] {
+	max-width: 100%;
+}
+
+[data-type="bs5-block/carousel"] {
+	.carousel-inner	{
+		> .block-editor-inner-blocks {
+			> .block-editor-block-list__layout {
+				> .block-list-appender {
+					position: absolute;
+					display: block;
+					clear: both;
+					z-index: 9;
+					margin: 0 auto;
+					left: 0;
+					right: 0;
+					width: 100px;
+					top: 0;
+					background-color: rgba(255,255,255, 0.7);
+				}
+			}
+		}
+	}
+}
+
+[data-type="custom/content-wrapper"]{
+	width: 100%;
+}
+
+[data-type="bs5/bootstrap-grid-column"]{
+	&.bs-g-col-negative-right-margin,
+	&.bs-g-col-negative-left-margin {
+		figure,
+		picture {
+			@include media-breakpoint-up(lg){
+				max-height: 550px;
+				min-height: 550px;
+				position: relative;
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+				}
+				.components-resizable-box__container {
+					position: absolute !important;
+					top: 0;
+					left: 0;
+					width: 100% !important;
+					height: 100% !important;
+				}
+			}
+		}
+	}
+}

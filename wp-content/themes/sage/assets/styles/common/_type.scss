@@ -1,0 +1,105 @@
+// //fonts go here
+
+// @font-face {
+//     font-family: 'La Parisienne';
+//     src: url('../fonts/LaParisienne-Regular.woff2') format('woff2'),
+//         url('../fonts/LaParisienne-Regular.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Niveau Grotesk Extra Light';
+//     src: url('../fonts/NiveauGroteskExtraLight.woff2') format('woff2'),
+//         url('../fonts/NiveauGroteskExtraLight.woff') format('woff');
+//     font-weight: 200;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Trash';
+//     src: url('../fonts/Trash-Regular.woff2') format('woff2'),
+//         url('../fonts/Trash-Regular.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'GT Sectra Display';
+//     src: url('../fonts/GTSectraDisplayTrialLight-Italic.woff2') format('woff2'),
+//         url('../fonts/GTSectraDisplayTrialLight-Italic.woff') format('woff');
+//     font-weight: 300;
+//     font-style: italic;
+// }
+
+%body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: 200;
+	letter-spacing: .25;
+}
+
+%title-1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 32px;
+	letter-spacing: .1;
+}
+
+%title-2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 26px;
+	letter-spacing: .1;
+}
+
+%title-3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 19px;
+}
+
+%small-cap-1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	letter-spacing: 1.25;
+}
+
+%small-cap-2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	letter-spacing: 1;
+}
+
+%script {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 95px;
+	letter-spacing: -.25;
+}
+
+%quote {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 45px;
+	letter-spacing: .1;
+	text-decoration: underline;
+	// only Fire Fox
+	text-decoration-thickness: 1px;
+}
+
+.h1,
+h1 {
+	@extend %title-1;
+}
+
+.h2,
+h2 {
+	@extend %title-1;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+body {
+	@extend %body;
+	p {
+		@extend %body;
+	}
+}

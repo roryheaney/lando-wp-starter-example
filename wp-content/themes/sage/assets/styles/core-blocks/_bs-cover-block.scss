@@ -1,0 +1,68 @@
+// cover block
+.bs-cover-block {
+	min-height: 430px;
+	@include media-breakpoint-up(xl){
+		min-height: 600px;
+	}
+	&.has-bleed-left {
+		background-color:$black;
+		overflow: visible;
+		.wp-block-cover__background,
+		.bs-cover-block__bg-image-bleed {
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			position: absolute;
+			z-index: 1;
+			@include media-breakpoint-up(lg) {
+				--container-width: #{map_get($container-max-widths, lg) * 0.5};
+				--negative-margin: calc(
+					var(--container-width) - 50vw - #{$container-padding-x * 0.5}
+				);
+				left: var(--negative-margin);
+				right: 0;
+			}
+
+			@include media-breakpoint-up(xl) {
+				--container-width: #{map_get($container-max-widths, xl) * 0.5};
+			}
+			@include media-breakpoint-up(xxl) {
+				--container-width: #{map_get($container-max-widths, xxl) * 0.5};
+			}
+		}
+	}
+	&.has-bleed-right {
+		background-color:$black;
+		overflow: visible;
+		.wp-block-cover__background,
+		.bs-cover-block__bg-image-bleed {
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			position: absolute;
+			z-index: 1;
+			@include media-breakpoint-up(lg) {
+				--container-width: #{map_get($container-max-widths, lg) * 0.5};
+				--negative-margin: calc(
+					var(--container-width) - 50vw - #{$container-padding-x * 0.5}
+				);
+				right: var(--negative-margin);
+				left: 0;
+			}
+
+			@include media-breakpoint-up(xl) {
+				--container-width: #{map_get($container-max-widths, xl) * 0.5};
+			}
+			@include media-breakpoint-up(xxl) {
+				--container-width: #{map_get($container-max-widths, xxl) * 0.5};
+			}
+		}
+	}
+	.bs-cover-block__bg-image-bleed  {
+		background-size: cover;
+		background-position: center;
+		width: auto;
+	}
+}

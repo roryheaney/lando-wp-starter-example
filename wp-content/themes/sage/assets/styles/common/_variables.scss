@@ -1,0 +1,64 @@
+
+$theme-colors:(
+	white: #fff,
+	black: #000,
+	red: (
+		DEFAULT: red,
+		darker: darken(red, 20%),
+		lighter: lighten(red, 20%)
+	)
+);
+
+@function map-deep-get($map, $keys...) {
+	$value: $map;
+
+	@each $key in $keys {
+		$value: map-get($value, $key);
+	}
+
+	@return $value;
+}
+
+@function colors($keys...) {
+	$value: map-deep-get($theme-colors, $keys...);
+
+	@if (type-of($value) == 'map') {
+		$value: map-get($value, DEFAULT);
+	}
+
+	@return $value;
+}
+
+$theme-fonts: (
+	name: (
+		primary: $font-family-base,
+	),
+	weight: (
+		regular: 400,
+		bold: 700,
+		black: 900,
+	),
+	size: (
+		64: 64px,
+		60: 60px,
+		54: 54px,
+		48: 48px,
+		42: 42px,
+		36: 36px,
+		32: 32px,
+		28: 28px,
+		24: 24px,
+		20: 20px,
+		18: 18px,
+		16: 16px,
+		14: 14px,
+		13: 13px,
+		12: 12px,
+		10: 10px,
+	),
+);
+
+// color: colors(blue)
+// body {
+// 	color: colors(red, darker)
+// }

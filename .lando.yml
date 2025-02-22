@@ -1,4 +1,4 @@
-name: my-wp-starter
+name: fancy-squares
 recipe: wordpress
 excludes:
   - vendor
@@ -9,8 +9,9 @@ excludes:
   - /wp-content/backup-db
   - /wp-content/mu-plugins
   - /wp-content/plugins
-  - /wp-content/plugins/*/node_modules
-  - /wp-content/themes/*/node_modules
+  - /wp-content/plugins/Fancy-Squares/node_modules
+  - /wp-content/themes/sage/node_modules
+  - /wp-content/themes/full-site-editing/node_modules
   # - '!/wp-content/themes/your-theme'
   # - '!/wp-content/plugins/your-plugin'
 config:

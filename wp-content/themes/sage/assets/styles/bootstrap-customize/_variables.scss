@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap');
+
+// Base
+$font-family-base: 'Montserrat', sans-serif;
+// $body-color: $battleship-grey;
+// $line-height-base: calc(26 / 16);
+// $rfs-factor: 2.5;
+// $enable-grid-classes: false;
+$enable-cssgrid: true;
+$enable-negative-margins: true;
+
+// Global
+$container-padding-x: 60px;
+// $grid-gutter-width: 30px;
+// $border-color: #dedede;
+// $border-radius: 5px;
+// $box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+// $border-widths: (
+// 	6: 6px,
+// );
+$spacers: (
+  0: 0, // 0px
+  1: 0.25rem, // 4px
+  2: 0.5rem, // 8px
+  3: 1rem, // 16px
+  4: 1.5rem, // 24px
+  5: 3rem, // 48px
+  6: 4rem, // 64px
+  7: 5rem, // 80px
+  8: 6rem, // 96px
+  9: 7rem, // 112px
+  10: 8rem // 128px
+);
+
+// // Type
+// $h1-font-size: 64px;
+// $h2-font-size: 36px;
+// $h3-font-size: 28px;
+// $h4-font-size: 24px;
+// $h5-font-size: 20px;
+// $h6-font-size: 18px;
+// $headings-color: $black;
+// $headings-font-weight: 700;
+// $display-font-weight: 700;
+// $display-font-sizes: (
+// 	1: 90px,
+// 	2: 48px,
+// );
+$dark: #000;
+// // Colors
+// $theme-colors: (
+// 	'primary': $blue,
+// 	'secondary': $red,
+// 	//   "success":    $success,
+// 	//   "info":       $info,
+// 	//   "warning":    $warning,
+// 	//   "danger":     $danger,
+// 	'light': $white,
+// 	'dark': $dark,
+// 	'light-blue': $light-blue,
+// 	'blue': $blue2,
+// );
+
+// // Components
+$btn-font-weight: 700;
+$btn-font-size: 12px;
+// $btn-line-height: 18px;
+$btn-padding-y: 10px;
+$btn-padding-x: 24px;
+$btn-border-radius: 0;
+// $btn-font-size-sm: 14px;
+// $btn-padding-y-sm: 9px;
+// $btn-padding-x-sm: 20px;
+// $btn-border-radius-sm: 0;
+// $btn-padding-y-lg: 20px;
+// $btn-padding-x-lg: 0px;
+
+// $carousel-indicator-hit-area-height: 16px;
+// $hr-border-color: $white;
+// $hr-opacity: 0.1;
+// $nav-link-font-size: 14px;
+// $nav-link-font-weight: 700;
+// $navbar-light-color: $black;
+// $navbar-light-hover-color: $blue;
+// $navbar-light-active-color: $blue;
+// $navbar-nav-link-padding-x: 1rem;
+// $navbar-toggler-focus-width: 0.2rem $light-blue2;
+// $accordion-body-padding-y: 70px;
+// $accordion-body-padding-x: 0;
+// $accordion-button-padding-y: 30px;
+// $accordion-button-padding-x: 0;
+// $accordion-border-radius: 0;
+// $accordion-button-active-bg: $white;
+// $input-border-radius: 0;
+// $input-border-color: $border-color;
+// $input-font-size: 14px;
+// $input-color: $black;
+// $input-line-height: calc(22 / 14);
+// $input-padding-x: 20px;
+// $input-padding-y: 9px;
+// $badge-font-size: 0.625em;
+// $badge-padding-y: 0.5em;
+// $dropdown-min-width: 225px;
+// $dropdown-border-radius: 0;
+// $dropdown-border-color: rgba(0, 0, 0, 0.13);
+// $dropdown-font-size: 14px;
+// $dropdown-item-padding-x: 20px;
+// $dropdown-item-padding-y: 9px;
+// $dropdown-padding-y: 0;
+// $dropdown-spacer: 0;
+// $tooltip-font-size: 12px;
