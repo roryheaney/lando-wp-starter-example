@@ -1,7 +1,9 @@
 # Example Repo for Lando WordPress Environment
 
-Complete code as a companion for [this](https://paultruong.dev/blog/create-a-local-wordpress-environment-with-lando/) blog post.
+- Themes are Sage or Full Site editing
+  - Sage is a hybrid theme
 
 # .lando.yml
 
-- Replace name value with your project name
+- Branched off Master
+- This will never be merged in, but if there is an update needed in the base config, then it will take place in Main and get merged into this branch.
