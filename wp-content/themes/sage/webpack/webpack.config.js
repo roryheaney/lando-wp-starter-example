@@ -190,7 +190,7 @@ module.exports = (env, argv) => {
 			new BrowserSyncPlugin(
 				{
 					host: 'localhost',
-					proxy: 'https://sage-10.wordpress.test/',
+					proxy: 'https://fancy-squares.lndo.site/',
 					// https: true,
 					files: [
 						'public/**/*.css',

@@ -10,27 +10,27 @@ $postID = $post->ID;
 
 
 <?php
-	//
-	// *** This is so we can dynamically load ACF flexible content sections without specifically calling them out individually.
-	//
-	// get main content
-	// if ( have_rows( 'body_flexible_content', $postID ) ) :
-	// 	$count = 0;
-	// 	// loop through the selected ACF layouts and display the matching partial
-	// 	while ( have_rows( 'body_flexible_content', $postID ) ) : the_row();
-	// 		// increase counter per loop
-	// 		// count will be put on the href
-	// 		$count++;
-	// 		get_template_part( 'template-parts/flexible-content/' . get_row_layout(), null, array(
-	// 			'index' => $count
-	// 		) );
+//
+// *** This is so we can dynamically load ACF flexible content sections without specifically calling them out individually.
+//
+// get main content
+// if ( have_rows( 'body_flexible_content', $postID ) ) :
+// 	$count = 0;
+// 	// loop through the selected ACF layouts and display the matching partial
+// 	while ( have_rows( 'body_flexible_content', $postID ) ) : the_row();
+// 		// increase counter per loop
+// 		// count will be put on the href
+// 		$count++;
+// 		get_template_part( 'template-parts/flexible-content/' . get_row_layout(), null, array(
+// 			'index' => $count
+// 		) );
 
-	// 	endwhile;
+// 	endwhile;
 
-	// elseif ( get_the_content() ) :
-	// 	// no layouts found
-	// 	echo 'Select A layout';
-	// endif;
+// elseif ( get_the_content() ) :
+// 	// no layouts found
+// 	echo 'Select A layout';
+// endif;
 ?>
 <!-- OR -->
 <?php

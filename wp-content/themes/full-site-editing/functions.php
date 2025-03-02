@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Functions and definitions
  *
@@ -15,12 +16,13 @@
  *
  * @return void
  */
-function fancy_squares_base_styles() {
+function fancy_squares_base_styles()
+{
 	wp_enqueue_style(
 		'fancy-squares-base-style',
 		get_stylesheet_uri(),
 		[],
-		wp_get_theme()->get( 'Version' )
+		wp_get_theme()->get('Version')
 	);
 }
-add_action( 'wp_enqueue_scripts', 'fancy_squares_base_styles' );
+add_action('wp_enqueue_scripts', 'fancy_squares_base_styles');
