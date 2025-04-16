@@ -1,0 +1,22 @@
+{
+	"scripts": {
+		"build": "wp-scripts build",
+		"start": "wp-scripts start",
+		"lint:js": "wp-scripts lint-js",
+		"lint:css": "wp-scripts lint-style",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"lint": "npm run lint:js && npm run lint:css",
+		"test": "wp-scripts test-unit-js",
+		"format": "wp-scripts format",
+		"devsass": "sass --silence-deprecation=mixed-decls,color-functions,global-builtin,import src/scss/main.scss dist/css/style.css",
+		"sasswatch": "sass --silence-deprecation=mixed-decls,color-functions,global-builtin,import --watch --trace src/scss/main.scss dist/css/style.css"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^30.15.0",
+		"browser-sync": "^2.29.3",
+		"browser-sync-webpack-plugin": "^2.3.0"
+	},
+	"dependencies": {
+		"bootstrap": "^5.3.5"
+	}
+}

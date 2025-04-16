@@ -1,0 +1,1 @@
+{"version":3,"file":"js/admin.js","mappings":";;;;AAAA;AACAA,OAAO,CAACC,GAAG,CAAE,sBAAuB,CAAC,C","sources":["webpack:///./src/js/admin.js"],"sourcesContent":["// eslint-disable-next-line no-console\nconsole.log( 'Hello from admin.js!' );\n"],"names":["console","log"],"sourceRoot":""}

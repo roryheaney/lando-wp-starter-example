@@ -1,0 +1,1 @@
+{"version":3,"file":"js/main.js","mappings":";;;;AAAA;AACA;AACA;AACAA,OAAO,CAACC,GAAG,CAAE,cAAe,CAAC,C","sources":["webpack:///./src/js/index.js"],"sourcesContent":["// main.scss\n// import '../scss/main.scss';\n// eslint-disable-next-line no-console\nconsole.log( 'Hello World!' );\n"],"names":["console","log"],"sourceRoot":""}
