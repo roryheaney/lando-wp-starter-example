@@ -5,6 +5,8 @@ const path = require( 'path' );
 const BrowserSyncPlugin = require( 'browser-sync-webpack-plugin' );
 // eslint-disable-next-line import/no-extraneous-dependencies, , prettier/prettier
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// eslint-disable-next-line import/no-extraneous-dependencies,
+const CopyPlugin = require( 'copy-webpack-plugin' );
 
 // Conditionally include the style entry point for production only
 const isProduction = process.env.NODE_ENV === 'production';
@@ -13,7 +15,9 @@ const entryPoints = {
 	admin: path.resolve( __dirname, 'src/js/admin.js' ),
 };
 if ( isProduction ) {
-	entryPoints.style = path.resolve( __dirname, 'src/scss/main.scss' ); // Add style entry in production
+	// Add style entry in production because we are using sass from @wordpress/scripts
+	// and we need to compile it separately
+	entryPoints.style = path.resolve( __dirname, 'src/scss/main.scss' );
 }
 module.exports = {
 	...defaultConfig,
@@ -30,6 +34,14 @@ module.exports = {
 		// Explicitly add MiniCssExtractPlugin with custom output path
 		new MiniCssExtractPlugin( {
 			filename: 'css/[name].css', // Output CSS to dist/css/
+		} ),
+		new CopyPlugin( {
+			patterns: [
+				{
+					from: path.resolve( __dirname, 'src/images' ),
+					to: 'images/[path][name].[ext]',
+				},
+			],
 		} ),
 		// ...defaultConfig.plugins,
 		new BrowserSyncPlugin(
