@@ -45,12 +45,18 @@
 			],
 			"duotone": [
 				{
-					"colors": [ "#00a0d2", "#0073aa" ],
+					"colors": [
+						"#00a0d2",
+						"#0073aa"
+					],
 					"slug": "secondary-primary",
 					"name": "Secondary and primary"
 				},
 				{
-					"colors": [ "#0073aa", "#f0f0f0" ],
+					"colors": [
+						"#0073aa",
+						"#f0f0f0"
+					],
 					"slug": "primary-contrast",
 					"name": "Primary and Contrast"
 				}
@@ -58,10 +64,17 @@
 		},
 		"layout": {
 			"contentSize": "1024px",
-			"wideSize": "1440px"
+			"wideSize": "1400px"
 		},
 		"spacing": {
-			"units": [ "px", "em", "rem", "vh", "vw", "%" ]
+			"units": [
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw",
+				"%"
+			]
 		},
 		"typography": {
 			"dropCap": true,
@@ -249,6 +262,13 @@
 				"typography": {
 					"lineHeight": "1"
 				}
+			},
+			"core/columns": {
+				"spacing": {
+					"margin": false,
+					"padding": false,
+					"blockGap": false
+				}
 			}
 		},
 		"color": {
@@ -348,7 +368,10 @@
 		{
 			"name": "no-title",
 			"title": "No title",
-			"postTypes": [ "post", "page" ]
+			"postTypes": [
+				"post",
+				"page"
+			]
 		}
 	]
 }
