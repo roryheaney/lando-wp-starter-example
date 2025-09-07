@@ -27,6 +27,7 @@ wp-config.php
 !/wp-content/themes/sage
 !/wp-content/themes/full-site-editing
 !/wp-content/themes/full-site-editing-build
+!/wp-content/themes/sage-wordpress-scripts
 
 # Example plugin
 /wp-content/plugins/*

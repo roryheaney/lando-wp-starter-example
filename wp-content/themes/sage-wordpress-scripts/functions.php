@@ -28,3 +28,10 @@ foreach ($sage_includes as $file) {
 	require_once $filepath;
 }
 unset($file, $filepath);
+
+// Uncomment the following lines to add excerpts support for 'service' post type
+// add_action('init', 'fancy_squares_add_excerpts_to_pages');
+// function fancy_squares_add_excerpts_to_pages()
+// {
+// 	add_post_type_support('service', 'excerpt');
+// }
