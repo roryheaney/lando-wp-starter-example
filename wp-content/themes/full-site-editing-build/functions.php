@@ -19,7 +19,7 @@
 function fancy_squares_base_styles()
 {
 	wp_enqueue_style(
-		'fancy-squares-base-style',
+		'fancy-squares-base-styles',
 		get_stylesheet_uri(),
 		[],
 		wp_get_theme()->get('Version')
@@ -41,7 +41,7 @@ function fancy_squares_theme_enqueue_scripts()
 	// Enqueue main JS
 	$main_asset = $load_asset_file('main');
 	wp_enqueue_script(
-		'my-theme-main',
+		'fancy-squares-base-main-js',
 		get_template_directory_uri() . '/dist/js/main.js',
 		$main_asset['dependencies'], // Load dependencies from main.assets.php
 		$main_asset['version'] ?: filemtime(get_template_directory() . '/dist/js/main.js'), // Use asset version or filemtime
@@ -50,7 +50,7 @@ function fancy_squares_theme_enqueue_scripts()
 
 	// Enqueue CSS (assuming main.css is output; adjust if using a different CSS file)
 	wp_enqueue_style(
-		'my-theme-style',
+		'fancy-squares-base-main-style',
 		get_template_directory_uri() . '/dist/css/style.css',
 		'', // Load style dependencies, if any
 		filemtime(get_template_directory() . '/dist/css/style.css') // Use asset version or filemtime
@@ -79,7 +79,7 @@ function fancy_squares_admin_enqueue_scripts()
 	};
 	$admin_asset = $load_asset_file('admin');
 	wp_enqueue_script(
-		'logisteed-admin-js',
+		'fancy-squares-base-admin-js',
 		get_theme_file_uri() . '/dist/js/admin.js',
 		$admin_asset['dependencies'], // Load dependencies from admin.assets.php
 		$admin_asset['version'] ?: filemtime(get_template_directory() . '/dist/js/admin.js'), // Use asset version or filemtime
@@ -89,7 +89,7 @@ function fancy_squares_admin_enqueue_scripts()
 
 	// Enqueue CSS (assuming main.css is output; adjust if using a different CSS file)
 	wp_enqueue_style(
-		'logisteed-admin-style',
+		'fancy-squares-base-admin-style',
 		get_theme_file_uri() . '/dist/css/style.css',
 		'', // Load style dependencies, if any
 		filemtime(get_template_directory() . '/dist/css/style.css') // Use asset version or filemtime
