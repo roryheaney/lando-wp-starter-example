@@ -97,74 +97,20 @@
 					"fontFace": [
 						{
 							"fontFamily": "Inter",
-							"fontWeight": "100",
+							"fontWeight": "100 700",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [
-								"file:./src/fonts/inter-v20-latin-100.woff2"
+								"file:./src/fonts/inter-variablefont.woff2"
 							]
 						},
 						{
 							"fontFamily": "Inter",
-							"fontWeight": "100",
+							"fontWeight": "100 700",
 							"fontStyle": "italic",
 							"fontStretch": "normal",
 							"src": [
-								"file:./src/fonts/inter-v20-latin-100italic.woff2"
-							]
-						},
-						{
-							"fontFamily": "Inter",
-							"fontWeight": "400",
-							"fontStyle": "normal",
-							"fontStretch": "normal",
-							"src": [
-								"file:./src/fonts/inter-v20-latin-regular.woff2"
-							]
-						},
-						{
-							"fontFamily": "Inter",
-							"fontWeight": "400",
-							"fontStyle": "italic",
-							"fontStretch": "normal",
-							"src": [
-								"file:./src/fonts/inter-v20-latin-italic.woff2"
-							]
-						},
-						{
-							"fontFamily": "Inter",
-							"fontWeight": "600",
-							"fontStyle": "normal",
-							"fontStretch": "normal",
-							"src": [
-								"file:./src/fonts/inter-v20-latin-600.woff2"
-							]
-						},
-						{
-							"fontFamily": "Inter",
-							"fontWeight": "600",
-							"fontStyle": "italic",
-							"fontStretch": "normal",
-							"src": [
-								"file:./src/fonts/inter-v20-latin-600italic.woff2"
-							]
-						},
-						{
-							"fontFamily": "Inter",
-							"fontWeight": "700",
-							"fontStyle": "normal",
-							"fontStretch": "normal",
-							"src": [
-								"file:./src/fonts/inter-v20-latin-700.woff2"
-							]
-						},
-						{
-							"fontFamily": "Inter",
-							"fontWeight": "700",
-							"fontStyle": "italic",
-							"fontStretch": "normal",
-							"src": [
-								"file:./src/fonts/inter-v20-latin-700italic.woff2"
+								"file:./src/fonts/inter-variablefont-italic.woff2"
 							]
 						}
 					]

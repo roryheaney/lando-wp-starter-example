@@ -52,7 +52,7 @@ function fancy_squares_theme_enqueue_scripts()
 	wp_enqueue_style(
 		'fancy-squares-base-main-style',
 		get_template_directory_uri() . '/dist/css/style.css',
-		'', // Load style dependencies, if any
+		[], // Load style dependencies, if any
 		filemtime(get_template_directory() . '/dist/css/style.css') // Use asset version or filemtime
 	);
 
@@ -91,7 +91,7 @@ function fancy_squares_admin_enqueue_scripts()
 	wp_enqueue_style(
 		'fancy-squares-base-admin-style',
 		get_theme_file_uri() . '/dist/css/style.css',
-		'', // Load style dependencies, if any
+		[], // Load style dependencies, if any
 		filemtime(get_template_directory() . '/dist/css/style.css') // Use asset version or filemtime
 	);
 
@@ -105,10 +105,7 @@ function fancy_squares_admin_enqueue_scripts()
 	// 	true
 	// );
 }
-add_action('enqueue_block_assets', 'fancy_squares_admin_enqueue_scripts');
-
-
-add_action('enqueue_block_assets', 'fancy_squares_admin_enqueue_scripts');
+add_action('enqueue_block_editor_assets', 'fancy_squares_admin_enqueue_scripts');
 
 // Uncomment the following lines to add excerpts support for 'service' post type
 // add_action('init', 'fancy_squares_add_excerpts_to_pages');
